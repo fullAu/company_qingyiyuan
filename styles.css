@@ -19,7 +19,7 @@ body {
 
 /* 导航栏样式 */
 header {
-    background: #2c3e50;
+    background: #3498db;
     color: white;
     padding: 1rem 0;
     position: fixed;
@@ -62,7 +62,7 @@ header .container {
 }
 
 .navbar a:hover {
-    color: #3498db;
+    color: #cde8fa;
 }
 
 .mobile-menu {
@@ -73,7 +73,8 @@ header .container {
 
 /* 英雄区域 */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/seed/cranework/1600/800.jpg');
+    /* background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/seed/cranework/1600/800.jpg'); */
+    background: #3498db;
     background-size: cover;
     background-position: center;
     height: 100vh;

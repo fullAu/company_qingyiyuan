@@ -6,86 +6,7 @@
     <title>起重吊装公司 - 专业吊车起重安装服务</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        // jQuery兼容代码：如果jQuery加载失败，mock一个简单的$函数
-        if (typeof jQuery === 'undefined') {
-            var $ = function(selector) {
-                // 简单的DOM选择器
-                if (typeof selector === 'string') {
-                    return document.querySelectorAll(selector);
-                }
-                return [];
-            };
-
-            // 模拟jQuery的ready方法
-            $.fn = {
-                ready: function(callback) {
-                    if (document.readyState === 'complete') {
-                        callback();
-                    } else {
-                        document.addEventListener('DOMContentLoaded', callback);
-                    }
-                },
-                click: function(callback) {
-                    if (this.length > 0) {
-                        this[0].addEventListener('click', callback);
-                    }
-                    return this;
-                },
-                slideToggle: function() {
-                    if (this.length > 0) {
-                        const element = this[0];
-                        if (element.style.display === 'none') {
-                            element.style.display = 'block';
-                        } else {
-                            element.style.display = 'none';
-                        }
-                    }
-                    return this;
-                },
-                offset: function() {
-                    if (this.length > 0) {
-                        const rect = this[0].getBoundingClientRect();
-                        return {
-                            top: rect.top + window.pageYOffset,
-                            left: rect.left + window.pageXOffset
-                        };
-                    }
-                    return { top: 0, left: 0 };
-                },
-                animate: function(params, duration, callback) {
-                    if (this.length > 0) {
-                        const element = this[0];
-                        const start = Date.now();
-                        const initial = element.scrollTop;
-                        const target = params.scrollTop;
-
-                        function step() {
-                            const elapsed = Date.now() - start;
-                            const progress = Math.min(elapsed / duration, 1);
-                            element.scrollTop = initial + (target - initial) * progress;
-
-                            if (progress < 1) {
-                                requestAnimationFrame(step);
-                            } else if (callback) {
-                                callback();
-                            }
-                        }
-
-                        requestAnimationFrame(step);
-                    }
-                    return this;
-                },
-                trigger: function(event) {
-                    if (this.length > 0) {
-                        this[0].dispatchEvent(new Event(event));
-                    }
-                    return this;
-                }
-            };
-        }
-    </script>
+    
 </head>
 <body>
     <!-- 导航栏 -->
@@ -194,6 +115,87 @@
             <p>&copy; 2026 起重吊装公司. 版权所有.</p>
         </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // jQuery兼容代码：如果jQuery加载失败，mock一个简单的$函数
+        if (typeof jQuery === 'undefined') {
+            var $ = function(selector) {
+                // 简单的DOM选择器
+                if (typeof selector === 'string') {
+                    return document.querySelectorAll(selector);
+                }
+                return [];
+            };
+
+            // 模拟jQuery的ready方法
+            $.fn = {
+                ready: function(callback) {
+                    if (document.readyState === 'complete') {
+                        callback();
+                    } else {
+                        document.addEventListener('DOMContentLoaded', callback);
+                    }
+                },
+                click: function(callback) {
+                    if (this.length > 0) {
+                        this[0].addEventListener('click', callback);
+                    }
+                    return this;
+                },
+                slideToggle: function() {
+                    if (this.length > 0) {
+                        const element = this[0];
+                        if (element.style.display === 'none') {
+                            element.style.display = 'block';
+                        } else {
+                            element.style.display = 'none';
+                        }
+                    }
+                    return this;
+                },
+                offset: function() {
+                    if (this.length > 0) {
+                        const rect = this[0].getBoundingClientRect();
+                        return {
+                            top: rect.top + window.pageYOffset,
+                            left: rect.left + window.pageXOffset
+                        };
+                    }
+                    return { top: 0, left: 0 };
+                },
+                animate: function(params, duration, callback) {
+                    if (this.length > 0) {
+                        const element = this[0];
+                        const start = Date.now();
+                        const initial = element.scrollTop;
+                        const target = params.scrollTop;
+
+                        function step() {
+                            const elapsed = Date.now() - start;
+                            const progress = Math.min(elapsed / duration, 1);
+                            element.scrollTop = initial + (target - initial) * progress;
+
+                            if (progress < 1) {
+                                requestAnimationFrame(step);
+                            } else if (callback) {
+                                callback();
+                            }
+                        }
+
+                        requestAnimationFrame(step);
+                    }
+                    return this;
+                },
+                trigger: function(event) {
+                    if (this.length > 0) {
+                        this[0].dispatchEvent(new Event(event));
+                    }
+                    return this;
+                }
+            };
+        }
+    </script>
 
     <script>
         $(document).ready(function() {
