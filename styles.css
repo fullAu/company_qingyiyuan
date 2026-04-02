@@ -195,54 +195,48 @@ header .container {
 
 .contact-content {
     display: flex;
-    gap: 50px;
-    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+/* 响应式设计 - 移动端 */
+@media (max-width: 768px) {
+    .contact-content {
+        align-items: center;
+    }
 }
 
 .contact-info {
     flex: 1 1 300px;
-}
-
-.contact-form {
-    flex: 1 1 300px;
+    max-width: 600px;
 }
 
 .info-item {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     background: white;
-    padding: 15px;
-    border-radius: 10px;
+    padding: 12px 15px;
+    border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
 .info-item i {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #3498db;
-    margin-right: 15px;
+    margin-right: 12px;
 }
 
-.contact-form form {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+.contact-info .info-item:last-child {
+    margin-bottom: 0;
 }
 
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.contact-form textarea {
-    resize: vertical;
-    min-height: 120px;
+/* 页脚 */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
 }
 
 /* 页脚 */
