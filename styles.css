@@ -98,8 +98,8 @@ header .container {
 
 .btn {
     display: inline-block;
-    background: #3498db;
-    color: white;
+    background: #fefefe;
+    color: rgb(32, 32, 32);
     padding: 12px 30px;
     text-decoration: none;
     border-radius: 5px;
@@ -109,6 +109,7 @@ header .container {
 
 .btn:hover {
     background: #2980b9;
+    color: #fff;
 }
 
 /* 服务项目 */
