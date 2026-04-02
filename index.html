@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>起重吊装公司 - 专业吊车起重安装服务</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>起重吊装</h1>
+                <p>专业吊车起重安装服务</p>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#services">服务项目</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 英雄区域 -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>专业吊车起重安装服务</h2>
+                <p>我们提供安全、高效、专业的吊车起重安装解决方案</p>
+                <a href="#contact" class="btn">立即咨询</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务项目 -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>服务项目</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-truck-monster"></i>
+                    <h3>大型设备吊装</h3>
+                    <p>专业吊装重型机械设备，确保安全高效</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-building"></i>
+                    <h3>建筑吊装</h3>
+                    <p>建筑结构吊装、安装服务</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-industry"></i>
+                    <h3>工业设备安装</h3>
+                    <p>工业设备吊装、定位和安装</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>设备搬运</h3>
+                    <p>精密设备搬运和运输服务</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>关于我们</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>我们是一家专业的吊车起重安装公司，拥有多年的行业经验和技术团队。我们致力于为客户提供安全、高效、专业的吊装服务，确保每个项目都能按时、按质完成。</p>
+                    <p>我们的团队由经验丰富的吊车司机和专业的技术人员组成，配备先进的吊装设备，能够处理各种复杂的吊装任务。无论您是需要大型设备吊装、建筑结构安装还是精密设备搬运，我们都能为您提供最合适的解决方案。</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://picsum.photos/seed/crane/400/300.jpg" alt="吊车作业">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>联系我们</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>电话：400-123-4567</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>邮箱：info@craneservice.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>地址：北京市朝阳区吊装路123号</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="您的姓名" required>
+                        <input type="email" placeholder="您的邮箱" required>
+                        <input type="tel" placeholder="联系电话" required>
+                        <textarea placeholder="请描述您的需求" rows="4" required></textarea>
+                        <button type="submit" class="btn">提交咨询</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 起重吊装公司. 版权所有.</p>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            // 移动端菜单切换
+            $('.mobile-menu').click(function() {
+                $('.navbar ul').slideToggle();
+            });
+
+            // 平滑滚动
+            $('a[href^="#"]').click(function(e) {
+                e.preventDefault();
+                var target = $(this).attr('href');
+                $('html, body').animate({
+                    scrollTop: $(target).offset().top
+                }, 1000);
+            });
+
+            // 表单提交处理
+            $('form').submit(function(e) {
+                e.preventDefault();
+                alert('感谢您的咨询！我们会尽快与您联系。');
+                $(this).trigger('reset');
+            });
+        });
+    </script>
+</body>
+</html>
