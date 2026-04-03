@@ -252,6 +252,16 @@ footer {
     margin-top: 50px;
 }
 
+/* 电话链接样式 - 确保不显示蓝色和下划线 */
+.phone-link {
+    color: #333;
+    text-decoration: none;
+}
+
+.phone-link:hover {
+    color: #3498db;
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
     .navbar ul {
